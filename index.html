@@ -9,20 +9,24 @@
 <body>
   <h1>Conversor de monedas Nacional</h1>
   <main>
-    <form action="">
-      <input type="text" id="inputDinero">
-
-      <p>Moneda a convertir</p>
-
-      <select name="" id="select">
-        <option value="">Dólar</option>
-        <option value="">Euro</option>
-      </select>
-
-      <p>Resultado: <span id="resultadoConversor"></span></p>
-
+    <form id="form">
+        <h1>Conversor de Monedas</h1>
+        <label for="inputDinero">Pesos CLP</label>
+        <input name="clpInput" id="clpInput" type="number" placeholder="Ingrese el monto en CLP" min="0"/>
+        <label for="monedas">Moneda a convertir:</label>
+        <select name="select" id="selec">
+          <option id="selectEuro" value="euro">Euros</option>
+          <option id="selectDolar" value="dolar">Dólar</option>
+        </select>
+        <button type="submit">Buscar</button>
+        <p>Resultado: <span id="resultadoConversor"></span></p>
     </form>
+    <div>
+        <h2>Valor de los ultimos 10 dias</h2>
+        <canvas id="grafico"></canvas>
+    </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
