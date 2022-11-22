@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de monedas Nacional</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Monedas</title>
 </head>
+
 <body>
-  <h1>Conversor de monedas Nacional</h1>
-  <main>
-    <form id="form">
-        <h1>Conversor de Monedas</h1>
-        <label for="inputDinero">Pesos CLP</label>
-        <input name="clpInput" id="clpInput" type="number" placeholder="Ingrese el monto en CLP" min="0"/>
-        <label for="monedas">Moneda a convertir:</label>
-        <select name="select" id="selec">
-          <option id="selectEuro" value="euro">Euros</option>
-          <option id="selectDolar" value="dolar">Dólar</option>
-        </select>
-        <button type="submit">Buscar</button>
-        <p>Resultado: <span id="resultadoConversor"></span></p>
-    </form>
-    <div>
-        <h2>Valor de los ultimos 10 dias</h2>
-        <canvas id="grafico"></canvas>
-    </div>
-  </main>
+  <form id="formulario">
+    <h1>Conversor de Monedas</h1>
+    <label for="inputPesos">Pesos CLP</label>
+    <input name="inputPesos" id="inputPesos" type="number" placeholder="Ingrese monto a convertir" min="0" />
+    <label for="monedas">Moneda a convertir:</label>
+    <select name="select" id="select">
+      <option value="" disabled selected hidden>Seleccione moneda</option>
+      <option value="dolar">Dólar</option>
+      <option value="euro">Euro</option>
+    </select>
+    <button type="submit">Buscar</button>
+    <span id="result">$</span>
+  </form>
+
+  <h4>Historial de los ultimos 10 dias</h4>
+  <canvas id="grafico"></canvas>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
